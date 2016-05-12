@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context="gr.extract.hivelive.Fragments.PreferencesFragment">
+
+    <Switch
+        android:id="@+id/offline_mode_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="Offline mode"
+        android:textSize="20sp"
+        android:layout_marginBottom="20dp"/>
+
+    <Switch
+        android:id="@+id/autologin_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="Autologin"
+        android:textSize="20sp"
+        android:layout_marginBottom="20dp"/>
+
+    <!--<RelativeLayout-->
+        <!--android:layout_below="@+id/offline_mode_switch"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:paddingLeft="20dp"-->
+        <!--android:paddingRight="20dp">-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Autologin"-->
+            <!--android:textStyle="bold"-->
+            <!--android:textSize="20sp"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_centerInParent="true"/>-->
+        <!---->
+        <!--<CheckBox-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentRight="true"/>-->
+    <!--</RelativeLayout>-->
+
+
+
+</LinearLayout>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:id="@+id/values_columns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="40dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:layout_weight="1"
+          >
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:text=""
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/columns_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="6"-->
+                    <!--android:layout_margin="5dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:textSize="20sp" />-->
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:text="5"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:textSize="20sp" />-->
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:text="4"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:textSize="20sp" />-->
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rows_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="40dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:layout_below="@+id/values_columns"
+            android:layout_weight="1"
+            >
+
+
+            <TextView
+                android:id="@+id/grid_answer_tv"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:text="text"
+                android:textSize="16sp" />
+
+            <RadioGroup
+                android:id="@+id/grid_answers_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--&gt;-->
+
+                    <!--<RadioButton-->
+                        <!--android:id="@+id/very_good_rb"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:checked="true"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:tag="very good" />-->
+
+                    <!--<RadioButton-->
+                        <!--android:id="@+id/good_rb"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:tag="good"/>-->
+                <!--</RelativeLayout>-->
+
+
+                <!--<RadioButton-->
+                    <!--android:id="@+id/good_rb"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="0"-->
+                    <!--android:gravity="center"-->
+                    <!--android:tag="good"/>-->
+
+                <!--<RadioButton-->
+                    <!--android:id="@+id/medium_rb"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="0"-->
+                    <!--android:tag="medium"/>-->
+
+                <!--<RadioButton-->
+                    <!--android:id="@+id/bad_rb"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:tag="bad"/>-->
+
+                <!--<RadioButton-->
+                    <!--android:id="@+id/very_bad_rb"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:tag="very bad"/>-->
+
+            </RadioGroup>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

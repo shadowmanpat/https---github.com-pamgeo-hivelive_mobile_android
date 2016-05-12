@@ -1,0 +1,122 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:fillViewport="true"
+                android:padding="10dp"
+                tools:context="gr.extract.hivelive.Fragments.QuestionFragments.MultipleChoiceFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@drawable/custom_rounded_layout"
+        android:paddingTop="30dp">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/logo_small"/>
+
+        <TextView
+            android:id="@+id/question_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logo"
+            android:layout_centerHorizontal="true"
+            android:padding="10px"
+            android:text="Ερώτηση 1"
+            android:textColor="@color/nav_color"
+            android:textSize="18sp"
+            android:visibility="gone"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/question_num"
+            android:overScrollMode="never" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/question_num">
+
+                <TextView
+                    android:id="@+id/question_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="20dp"
+                    android:padding="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Ποια απο τα παρακατω δεν προτιματε ??"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="20dp"
+                    android:textStyle="italic"/>
+
+                <WebView
+                    android:id="@+id/question_wv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/question_tv"
+                    android:isScrollContainer="true"
+                    android:visibility="gone"
+                    android:layout_margin="10dp"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/multiple_choice_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/question_wv"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/another_option_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/multiple_choice_ll"
+                    android:orientation="horizontal"
+                    android:layout_centerHorizontal="true"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="0dp"
+                    android:visibility="invisible">
+
+                    <CheckBox
+                        android:id="@+id/another_option_chbx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Άλλο :"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"/>
+
+                    <EditText
+                        android:id="@+id/another_option_edt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint=" Συμπληρώστε την απάντησή σας"
+                        android:textSize="18sp"
+                        android:textStyle="italic"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+    </RelativeLayout>
+</RelativeLayout>

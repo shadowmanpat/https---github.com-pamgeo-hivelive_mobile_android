@@ -1,0 +1,112 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:layout_margin="10dp"
+                tools:context="gr.extract.hivelive.Fragments.QuestionFragments.MultipleChoiceFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/custom_rounded_layout"
+        android:paddingTop="30dp">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/logo_small"/>
+
+        <TextView
+            android:id="@+id/question_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logo"
+            android:layout_centerHorizontal="true"
+            android:padding="10px"
+            android:text="Ερώτηση 1"
+            android:textColor="@color/nav_color"
+            android:textSize="18sp"
+            android:visibility="gone"/>
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/question_num"
+            android:overScrollMode="never">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/question_num">
+
+                <TextView
+                    android:id="@+id/question_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:text="Ποια απο τα παρακατω δεν προτιματε ??"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="20dp"
+                    android:textStyle="italic"/>
+
+                <WebView
+                    android:id="@+id/question_wv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/question_tv"
+                    android:isScrollContainer="true"
+                    android:visibility="gone"
+                    android:layout_centerHorizontal="true"
+                    />
+
+                <RadioGroup
+                    android:id="@+id/single_choice_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/question_wv"
+                    android:orientation="vertical"
+                    android:paddingBottom="0dp"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:paddingTop="10dp">
+
+                </RadioGroup>
+
+                <LinearLayout
+                    android:id="@+id/another_option_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/single_choice_ll"
+                    android:orientation="horizontal"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:visibility="gone">
+
+                    <RadioButton
+                        android:id="@+id/another_option_rdb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Άλλο :"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"/>
+
+                    <EditText
+                        android:id="@+id/another_option_edt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint=" Συμπληρώστε την απάντησή σας"
+                        android:textSize="16sp"
+                        android:textStyle="italic"/>
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>

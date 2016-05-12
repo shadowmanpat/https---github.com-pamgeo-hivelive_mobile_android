@@ -1,0 +1,134 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="gr.extract.hivelive.Fragments.StartResearchFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:id="@+id/start_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="30dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/logo" />
+
+
+            <LinearLayout
+                android:id="@+id/fragment_signup_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_rounded_layout"
+                android:orientation="vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:padding="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="Στοιχεία Ερωτώμενου"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/start_firstname_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/custom_rounded_edittext"
+                    android:hint="Όνοματεπώνυμο"
+                    android:imeOptions="actionNext"
+                    android:nextFocusDown="@+id/signup_lastname_edt"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/form_text_color" />
+
+                <!--<EditText-->
+                    <!--android:id="@+id/start_lastname_edt"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginBottom="10dp"-->
+                    <!--android:background="@drawable/custom_rounded_edittext"-->
+                    <!--android:hint="Επώνυμο"-->
+                    <!--android:imeOptions="actionNext"-->
+                    <!--android:nextFocusDown="@+id/signup_phone_edt"-->
+                    <!--android:padding="10dp"-->
+                    <!--android:singleLine="true"-->
+                    <!--android:textColor="@color/form_text_color" />-->
+
+                <EditText
+                    android:id="@+id/start_phone_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/custom_rounded_edittext"
+                    android:hint="@string/signup_phone"
+                    android:imeOptions="actionNext"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:nextFocusDown="@+id/signup_email_edt"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/form_text_color" />
+
+                <EditText
+                    android:id="@+id/start_email_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/custom_rounded_edittext"
+                    android:hint="@string/login_email"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:nextFocusDown="@+id/start_address_edt"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/form_text_color" />
+
+                <EditText
+                    android:id="@+id/start_address_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/custom_rounded_edittext"
+                    android:hint="@string/address"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/form_text_color" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="italic"
+                    android:textSize="14sp"
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:text="*Το πεδίο Ονοματεπώνυμο είναι υποχρεωτικό">
+
+                </TextView>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</FrameLayout>

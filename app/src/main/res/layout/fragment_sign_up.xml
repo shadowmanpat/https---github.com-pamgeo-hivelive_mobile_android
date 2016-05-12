@@ -1,0 +1,316 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="gr.extract.hivelive.Fragments.SignUpFragment">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/nav_color_light"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:id="@+id/login_fl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="30dp">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/logo_hive2" />
+
+
+            <LinearLayout
+                android:id="@+id/fragment_signup_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_rounded_layout"
+                android:orientation="vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:padding="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/signup_tittle_tv"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/signup_name_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/custom_rounded_edittext"
+                    android:hint="@string/signup_name"
+                    android:imeOptions="actionNext"
+                    android:nextFocusDown="@+id/signup_username_edt"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/form_text_color" />
+
+                <EditText
+                    android:id="@+id/signup_username_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/custom_rounded_edittext"
+                    android:hint="@string/signup_username"
+                    android:imeOptions="actionNext"
+                    android:maxLength="10"
+                    android:nextFocusDown="@+id/signup_email_edt"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/form_text_color" />
+
+
+                <EditText
+                    android:id="@+id/signup_email_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/custom_rounded_edittext"
+                    android:hint="@string/login_email"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:nextFocusDown="@+id/signup_password_edt"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/form_text_color" />
+
+                <EditText
+                    android:id="@+id/signup_password_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/custom_rounded_edittext"
+                    android:hint="@string/login_password"
+                    android:imeOptions="actionNext"
+                    android:maxLength="12"
+                    android:nextFocusDown="@+id/signup_repeatpassword_edt"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/form_text_color" />
+
+                <EditText
+                    android:id="@+id/signup_repeatpassword_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/custom_rounded_edittext"
+                    android:hint="@string/signup_repeat_password"
+                    android:imeOptions="actionNext"
+                    android:maxLength="12"
+                    android:nextFocusDown="@+id/signup_phone_edt"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/form_text_color" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/gender_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:text="Φύλο"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                    <RadioGroup
+                        android:id="@+id/gender_radiogroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/gender_tv"
+                        android:imeOptions="actionNext"
+                        android:nextFocusDown="@+id/datetextview"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/gender_male"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Άνδρας"
+                            android:checked="true"
+                            android:textColor="@color/form_text_color" />
+
+                        <RadioButton
+                            android:id="@+id/gender_female"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Γυναίκα"
+                            android:textColor="@color/form_text_color" />
+
+                    </RadioGroup>
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/datetextview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/custom_rounded_edittext"
+                    android:imeOptions="actionNext"
+                    android:nextFocusDown="@+id/townspinner"
+                    android:padding="10dp"
+                    android:text="Ημ/νια Γέννησης"
+                    android:textColor="@color/form_text_color"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Πόλη/Περιοχή"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:id="@+id/townspinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/custom_rounded_edittext"
+                    android:imeOptions="actionNext"
+                    android:nextFocusDown="@+id/education_spinner"
+                    android:padding="10dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Εκπαίδευση"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:id="@+id/education_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/custom_rounded_edittext"
+                    android:imeOptions="actionNext"
+                    android:nextFocusDown="@+id/job_spinner"
+                    android:padding="10dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Επάγγελμα"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:id="@+id/job_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/custom_rounded_edittext"
+                    android:imeOptions="actionNext"
+                    android:nextFocusDown="@+id/signup_phone_edt"
+                    android:padding="10dp" />
+
+                <EditText
+                    android:id="@+id/signup_phone_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/custom_rounded_edittext"
+                    android:hint="@string/signup_phone"
+                    android:imeOptions="actionNext"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:nextFocusDown="@+id/signup_mobilephone_edt"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/form_text_color" />
+
+                <EditText
+                    android:id="@+id/signup_mobilephone_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/custom_rounded_edittext"
+                    android:hint="@string/signup_mobilephone"
+                    android:imeOptions="actionDone"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/form_text_color" />
+
+
+                <Button
+                    android:id="@+id/signup_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/login_button"
+                    android:text="@string/signup_button"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/signup_login_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/signup_remind_tv"
+                        android:textSize="12sp" />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/signup_message_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="10sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:visibility="invisible"/>
+
+            <com.github.rahatarmanahmed.cpv.CircularProgressView
+                android:id="@+id/progress_view"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                app:cpv_animAutostart="true"
+                app:cpv_indeterminate="true"
+                app:cpv_color="#2196F3"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</FrameLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/researches_ic"
+            android:icon="@drawable/filechart"
+            android:title="Έρευνες" />
+        <item
+            android:id="@+id/profile_ic"
+            android:icon="@drawable/account"
+            android:title="Πρoφίλ" />
+        <!--<item-->
+            <!--android:id="@+id/preferences_ic"-->
+            <!--android:icon="@drawable/prefs"-->
+            <!--android:title="Ρυθμίσεις" />-->
+        <!--<item-->
+            <!--android:id="@+id/signout_ic"-->
+            <!--android:icon="@drawable/exit"-->
+            <!--android:title="Αποσύνδεση χρήστη" />-->
+
+        <item
+            android:id="@+id/leave_ic"
+            android:icon="@drawable/exit"
+            android:title="Έξοδος" />
+
+    </group>
+
+    <!--<item android:title="Communicate">-->
+        <!--<menu>-->
+            <!--<item-->
+                <!--android:id="@+id/nav_share"-->
+                <!--android:icon="@drawable/ic_menu_share"-->
+                <!--android:title="Share" />-->
+            <!--<item-->
+                <!--android:id="@+id/nav_send"-->
+                <!--android:icon="@drawable/ic_menu_send"-->
+                <!--android:title="Send" />-->
+        <!--</menu>-->
+    <!--</item>-->
+
+</menu>

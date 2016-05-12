@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:paddingBottom="@dimen/activity_vertical_margin"
+              android:paddingLeft="@dimen/activity_horizontal_margin"
+              android:paddingRight="@dimen/activity_horizontal_margin"
+              android:paddingTop="@dimen/activity_vertical_margin"
+              android:weightSum="3"
+              app:layout_behavior="@string/appbar_scrolling_view_behavior"
+              tools:context="gr.extract.hivelive.Activities.ProfileActivity"
+              tools:showIn="@layout/activity_profile">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/profile_picture_dv"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    fresco:placeholderImage="@drawable/logo"
+                    fresco:placeholderImageScaleType="centerInside"
+                    fresco:roundingBorderColor="@color/nav_color"
+                    fresco:roundingBorderWidth="2dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/custom_rounded_layout"
+                android:orientation="vertical"
+                android:padding="30dp">
+
+
+                <EditText
+                    android:id="@+id/signup_name_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/custom_rounded_edittext"
+                    android:hint="@string/signup_name"
+                    android:imeOptions="actionNext"
+                    android:nextFocusDown="@+id/signup_username_edt"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/form_text_color"
+                    android:textSize="12sp"/>
+
+                <EditText
+                    android:id="@+id/signup_username_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/custom_rounded_edittext"
+                    android:hint="@string/signup_username"
+                    android:imeOptions="actionNext"
+                    android:maxLength="10"
+                    android:nextFocusDown="@+id/signup_email_edt"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/form_text_color"
+                    android:textSize="12sp"/>
+
+
+                <EditText
+                    android:id="@+id/signup_email_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/custom_rounded_edittext"
+                    android:hint="@string/login_email"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:nextFocusDown="@+id/signup_password_edt"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/form_text_color"
+                    android:textSize="12sp"/>
+
+                <EditText
+                    android:id="@+id/signup_password_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/custom_rounded_edittext"
+                    android:hint="@string/login_password"
+                    android:imeOptions="actionNext"
+                    android:maxLength="12"
+                    android:nextFocusDown="@+id/signup_repeatpassword_edt"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/form_text_color"
+                    android:textSize="12sp"/>
+
+                <EditText
+                    android:id="@+id/signup_repeatpassword_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/custom_rounded_edittext"
+                    android:hint="@string/signup_repeat_password"
+                    android:imeOptions="actionNext"
+                    android:maxLength="12"
+                    android:nextFocusDown="@+id/gender_radiogroup"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/form_text_color"
+                    android:textSize="12sp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/gender_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:text="Φύλο"
+                        android:textColor="@android:color/black"
+                        android:textSize="12sp"/>
+
+                    <RadioGroup
+                        android:id="@+id/gender_radiogroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/gender_tv"
+                        android:imeOptions="actionNext"
+                        android:nextFocusDown="@+id/datetextview"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/male_radiobtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Άνδρας"
+                            android:textColor="@color/form_text_color"
+                            android:textSize="12sp"/>
+
+                        <RadioButton
+                            android:id="@+id/female_radiobtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Γυναίκα"
+                            android:textColor="@color/form_text_color"
+                            android:textSize="12sp"/>
+
+                    </RadioGroup>
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/datetextview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/custom_rounded_edittext"
+                    android:imeOptions="actionNext"
+                    android:nextFocusDown="@+id/townspinner"
+                    android:padding="10dp"
+                    android:text="Ημ/νια Γέννησης"
+                    android:textColor="@color/form_text_color"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Πόλη/Περιοχή"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"/>
+
+                <Spinner
+                    android:id="@+id/townspinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/custom_rounded_edittext"
+                    android:imeOptions="actionNext"
+                    android:padding="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Εκπαίδευση"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"/>
+
+                <Spinner
+                    android:id="@+id/education_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/custom_rounded_edittext"
+                    android:imeOptions="actionNext"
+                    android:padding="10dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Επάγγελμα"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"/>
+
+                <Spinner
+                    android:id="@+id/job_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/custom_rounded_edittext"
+                    android:imeOptions="actionNext"
+                    android:padding="10dp"
+                    />
+
+                <EditText
+                    android:id="@+id/signup_phone_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/custom_rounded_edittext"
+                    android:hint="@string/signup_phone"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:nextFocusDown="@+id/signup_mobilephone_edt"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/form_text_color"
+                    android:textSize="12sp"/>
+
+                <EditText
+                    android:id="@+id/signup_mobilephone_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/custom_rounded_edittext"
+                    android:hint="@string/signup_mobilephone"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:nextFocusDown="@+id/signup_button"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/form_text_color"
+                    android:textSize="12sp"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:fillViewport="true"
+                android:padding="10dp"
+                tools:context="gr.extract.hivelive.Fragments.QuestionFragments.MultipleChoiceFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@drawable/custom_rounded_layout"
+        android:paddingTop="30dp">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/logo_small"/>
+
+        <TextView
+            android:id="@+id/question_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logo"
+            android:layout_centerHorizontal="true"
+            android:padding="10px"
+            android:text="Ερώτηση 1"
+            android:textColor="@color/nav_color"
+            android:textSize="18sp"
+            android:visibility="gone"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/question_num"
+            android:overScrollMode="never">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/question_num"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/question_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:padding="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Ποια απο τα παρακατω δεν προτιματε ??"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="20dp"
+                    android:textStyle="italic"/>
+
+                <WebView
+                    android:id="@+id/question_wv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/question_tv"
+                    android:isScrollContainer="true"
+                    android:visibility="gone"
+                    android:layout_margin="10dp"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/main_ll"
+                    android:minHeight="250dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/question_wv"
+                    android:layout_marginBottom="20px"
+                    android:orientation="horizontal">
+
+                    <ademar.phasedseekbar.PhasedSeekBar
+                        android:id="@+id/thermometer"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        app:phased_anchor_height="40dp"
+                        app:phased_anchor_width="40dp"
+                        app:phased_base_background="@drawable/bg_likebar"
+                        app:phased_base_margin_bottom="10dp"
+                        app:phased_base_margin_left="30dp"
+                        app:phased_base_margin_right="30dp"
+                        app:phased_base_margin_top="10dp"
+                        app:phased_draw_on_off="true"
+                        app:phased_fix_point="false"
+                        app:phased_item_height="80dp"
+                        app:phased_item_width="80dp"
+                        app:phased_mode="vertical"/>
+
+                    <TextView
+                        android:id="@+id/value_of_therm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="20dp"
+                        android:padding="10dp"
+                        android:text="Επιλεγμένη τιμή:\n 50"
+                        android:textSize="18sp"
+                        android:textStyle="italic"/>
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+</RelativeLayout>
